@@ -1,10 +1,13 @@
 const form = document.querySelector("form");
 const booksList = document.querySelector("ul");
+const storedBooks = [];
 
-const storedBooksList = localStorage.getItem("booksList");
+window.onload = function () {
+  storedBooks.innerHTML = localStorage.getItem("storedBooks");
+  booksList.innerHTML = storedBooks.innerHTML;
+};
+
 let number = 0;
-
-console.log(booksList);
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -51,6 +54,5 @@ form.addEventListener("submit", function (event) {
   <p class="cell">${categoryValue}</p>`;
 
   booksList.appendChild(itemBook);
-  localStorage.setItem("booksList", JSON.stringify(booksList));
-  console.log(booksList);
+  localStorage.setItem("storedBooks", booksList.innerHTML);
 });
