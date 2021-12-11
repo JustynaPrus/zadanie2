@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularze</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Moja biblioteka</h1>
+        <h2>Dodaj książkę</h2>
+        <form>
+            <div class="box">
+                <label for="title">Tytuł książki:</label>
+                <input type="text" id="title" name="title">
+            </div>
+            <div class="box">
+                <label for="author">Autor książki:</label>
+                <input type="text" id="author" name="author">
+            </div>
+            <fieldset>
+                <legend>Priorytet przeczytania:</legend>
+                <input type="radio" id="one" name="read" value="1">
+                <label for="one">1</label>
+                <input type="radio" id="two" name="read" value="2">
+                <label for="two">2</label>
+                <input type="radio" id="three" name="read" value="3">
+                <label for="three">3</label>
+                <input type="radio" id="four" name="read" value="4">
+                <label for="four">4</label>
+                <input type="radio" id="five" name="read" value="5">
+                <label for="five">5</label>
+            </fieldset>
+            <fieldset>
+                <legend>Kategoria:</legend>
+                <input type="radio" id="literature" name="category" value="literatura obyczajowa">
+                <label for="literature">literatura obyczajowa</label>
+                <input type="radio" id="crime" name="category" value="kryminał">
+                <label for="crime">kryminał</label>
+                <input type="radio" id="fantasy" name="category" value="fantasy">
+                <label for="fantasy">fantasy</label>
+            </fieldset>
+            <button type="submit">Dodaj</button>
+        </form>
+        <h2>Moja lista książek</h2>
+        <div class="table">
+            <p class="number">Nr.</p>
+            <p class="cell">Tytuł książki</p>
+            <p class="cell">Autor książki</p>
+            <p class="smaller_cell">Priorytet</p>
+            <p class="cell">Kategoria</p>
+        </div>
+        <ul></ul>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
